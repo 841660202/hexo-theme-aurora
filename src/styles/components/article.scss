@@ -68,6 +68,7 @@
     }
     p {
       @apply text-sm lg:text-base pb-4 mb-2 lg:pb-6 lg:mb-2;
+      word-break: break-all;
     }
     .article-footer {
       @apply w-full flex justify-start flex-1 content-end items-end text-sm;
@@ -119,6 +120,7 @@
     }
     p {
       @apply text-base lg:text-lg pb-4 mb-2 lg:pb-6 lg:mb-2;
+      word-break: break-all;
     }
     .article-footer {
       @apply w-full flex justify-start flex-1 content-end items-end text-sm;
@@ -191,6 +193,7 @@
 
   p {
     @apply my-6;
+    word-break: break-all;
   }
 
   ul {
@@ -230,6 +233,7 @@
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
+    word-break: break-all;
   }
 
   ul li::before {

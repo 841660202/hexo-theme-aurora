@@ -238,7 +238,7 @@ pre[class*='language-'] {
 }
 .token.attr-value .token.punctuation.attr-equals,
 .token.attr-value .token.punctuation {
-  color: var(--subs) !important;
+  color: #1671fb !important;
 }
 .language-css .token.atrule {
   color: var(--cyan);
@@ -255,7 +255,7 @@ pre[class*='language-'] {
   color: var(--cyan);
 }
 .token.comment {
-  color: var(--comment);
+  color: #6a9f52;
 }
 .token.constant {
   color: var(--cyan);
@@ -302,14 +302,14 @@ pre[class*='language-'] {
   color: var(--cyan);
 }
 .token.punctuation {
-  color: var(--subs);
+  color: #1671fb;
 }
 .language-css .token.punctuation {
-  color: var(--subs);
+  color: #1671fb;
 }
 .language-html .token.punctuation,
 .language-markup .token.punctuation {
-  color: var(--subs);
+  color: #1671fb;
 }
 .token.selector {
   color: var(--pink);

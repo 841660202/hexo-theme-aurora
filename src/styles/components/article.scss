@@ -539,6 +539,16 @@
     );
   }
 
+  a[target=_blank]::after{
+    content: '';
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    display: inline-block;
+    background-image: url('~@/assets/a-target.svg');
+    background-repeat: no-repeat;
+  }
+
   a strong {
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;

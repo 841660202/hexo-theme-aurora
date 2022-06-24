@@ -68,6 +68,7 @@
     "default-category": "Article",
     "default-tag": "unsorted",
     "empty-tag": "Current no tags were found.",
+    "empty-category": "Current no Categories were found.",
     "pinned": "Pinned",
     "featured": "Featured"
   }

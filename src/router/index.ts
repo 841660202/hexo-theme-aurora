@@ -27,6 +27,12 @@ const routes = [
       import(/* webpackChunkName: "categories" */ '../views/Category.vue')
   },
   {
+    path: '/categories/search',
+    name: 'categories-search',
+    component: () =>
+      import(/* webpackChunkName: "result" */ '../views/Result.vue')
+  },
+  {
     path: '/archives',
     name: 'archives',
     component: () =>
@@ -43,6 +49,7 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "result" */ '../views/Result.vue')
   },
+
   {
     path: '/post/:slug*',
     name: 'post',

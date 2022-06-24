@@ -101,6 +101,9 @@ export default defineComponent({
       if (path.indexOf('tags') !== -1) {
         pageType.value = 'menu.tags'
         fetchPostByTag()
+      } else if (path.indexOf('categories') !== -1) {
+        pageType.value = 'menu.categories'
+        fetchPostByCategory()
       } else {
         pageType.value = 'menu.search'
       }
@@ -115,6 +118,13 @@ export default defineComponent({
     const fetchPostByTag = () => {
       isFetched.value = false
       postStore.fetchPostsByTag(querySlug.value).then(response => {
+        isFetched.value = true
+        posts.value = response
+      })
+    }
+    const fetchPostByCategory = () => {
+      isFetched.value = false
+      postStore.fetchPostsByCategory(querySlug.value).then(response => {
         isFetched.value = true
         posts.value = response
       })

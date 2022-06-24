@@ -110,6 +110,14 @@ export class ThemeMenu implements ObMenu {
           cn: '标签',
           en: 'Tags'
         }
+      },
+      Categories: {
+        name: 'Categories',
+        path: '/categories',
+        i18n: {
+          cn: '分类',
+          en: 'Categories'
+        }
       }
     }
 

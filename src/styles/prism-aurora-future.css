@@ -149,7 +149,7 @@ div.code-toolbar > .toolbar span:hover {
   color: #ffffff;
   text-decoration: none;
   opacity: 0.5;
-  background-color: var(--purple);
+  background-color: var(--cyan);
 }
 @media print {
   code[class*='language-'],
@@ -214,7 +214,7 @@ pre[class*='language-'] {
   height: 800px !important;
 }
 .language-css {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .token {
   color: var(--pink);
@@ -248,7 +248,7 @@ pre[class*='language-'] {
   color: var(--foreground);
 }
 .token.boolean {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .token.builtin,
 .token.class-name {
@@ -258,7 +258,7 @@ pre[class*='language-'] {
   color: var(--comment);
 }
 .token.constant {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .language-javascript .token.constant {
   color: var(--foreground);
@@ -271,19 +271,19 @@ pre[class*='language-'] {
   color: var(--pink);
 }
 .language-html .token.entity.named-entity {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .language-html .token.entity:not(.named-entity) {
   color: var(--pink);
 }
 .language-markup .token.entity.named-entity {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .language-markup .token.entity:not(.named-entity) {
   color: var(--pink);
 }
 .token.function {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .language-css .token.function {
   color: var(--pink);
@@ -315,7 +315,7 @@ pre[class*='language-'] {
   color: var(--pink);
 }
 .language-css .token.selector {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .token.regex {
   color: var(--pink);
@@ -328,7 +328,7 @@ pre[class*='language-'] {
   background: none !important;
 }
 .token.tag {
-  color: var(--purple);
+  color: var(--cyan);
 }
 .token.tag .token.punctuation {
   color: var(--pink);

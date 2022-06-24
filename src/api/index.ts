@@ -84,5 +84,5 @@ export async function fetchSearchIndexes(): Promise<AxiosResponse<any>> {
 export async function fetchAuthorPost(
   slug: string
 ): Promise<AxiosResponse<any>> {
-  return request.get<AuthorPosts>(`/authors/${slug}.json`)
+  return request.get<AuthorPosts>(`/authors/blog-author.json`)
 }

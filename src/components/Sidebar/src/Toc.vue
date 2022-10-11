@@ -56,7 +56,7 @@ export default defineComponent({
   padding-left: 1.5rem;
 
   > li {
-    @apply text-ob-bright font-extrabold pb-1;
+    @apply text-ob-bright text-sm font-extrabold pb-1;
     &.active {
       @apply text-ob;
     }

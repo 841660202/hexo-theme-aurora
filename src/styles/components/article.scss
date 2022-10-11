@@ -151,7 +151,7 @@
 }
 
 .post-html {
-  @apply bg-ob-deep-800 p-4 lg:p-14 rounded-2xl shadow-xl mb-8 lg:mb-0;
+  @apply bg-ob-deep-800 p-4 lg:p-6 rounded-2xl shadow-xl mb-8 lg:mb-0;
   h1,
   h2,
   h3,
@@ -529,7 +529,7 @@
     -webkit-text-fill-color: var(--text-bright);
     background-position: 0 100%;
     background-repeat: repeat-x;
-    background-size: 5px 5px;
+    background-size: 1px 1px;
     text-decoration: none;
     transition: all 350ms ease;
     background-image: linear-gradient(
@@ -539,7 +539,7 @@
     );
   }
 
-  a[target=_blank]::after{
+  a[target='_blank']::after {
     content: '';
     width: 18px;
     height: 18px;
@@ -647,8 +647,8 @@
     }
   }
   .post-title {
-    @apply mt-2 mb-4;
-    font-size: clamp(1.2rem, calc(1rem + 3.5vw), 4rem);
+    @apply mt-4 mb-4 pt-7;
+    font-size: clamp(1.2rem, calc(1rem + 1.5vw), 3rem);
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
     line-height: 1.1;
   }

@@ -57,6 +57,7 @@ export default defineComponent({
 
   > li {
     @apply text-ob-bright text-sm font-extrabold pb-1;
+    font-size: 12px;
     &.active {
       @apply text-ob;
     }
@@ -79,7 +80,8 @@ export default defineComponent({
   ol > li::before,
   ol ol > li::before,
   ol ol ol > li::before,
-  ol ol ol ol > li::before {
+  ol ol ol ol > li::before,
+  ol ol ol ol ol > li::before {
     content: '•';
     color: var(--text-accent);
     display: inline-block;

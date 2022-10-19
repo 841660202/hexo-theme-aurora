@@ -194,6 +194,7 @@
   p {
     @apply my-6;
     word-break: break-all;
+    vertical-align: top;
   }
 
   ul {
@@ -540,13 +541,22 @@
   }
 
   a[target='_blank']::after {
+    // width: 18px;
+    // height: 18px;
+    // font-size: 18px;
+    // display: inline-block;
+    // background-image: url('~@/assets/a-target.svg');
+    // background-repeat: no-repeat;
+    background-color: var(--text-normal);
     content: '';
-    width: 18px;
-    height: 18px;
-    font-size: 18px;
-    display: inline-block;
-    background-image: url('~@/assets/a-target.svg');
-    background-repeat: no-repeat;
+    display: inline-flex;
+    height: 12px;
+    margin-left: 4px;
+    -webkit-mask-image: url('~@/assets/a-target.svg');
+    mask-image: url('~@/assets/a-target.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    width: 12px;
   }
 
   a strong {

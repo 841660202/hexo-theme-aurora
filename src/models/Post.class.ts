@@ -216,7 +216,9 @@ export class Categories {
   constructor(raw?: []) {
     if (raw) {
       Object.assign(this, {
-        data: raw.map((one: { [key: string]: [] }) => new Category(one))
+        data: raw
+          .map((one: { [key: string]: [] }) => new Category(one))
+          .sort((a, b) => b.count - a.count)
       })
     }
   }
@@ -253,7 +255,9 @@ export class Tags {
   constructor(raw?: []) {
     if (raw) {
       Object.assign(this, {
-        data: raw.map((one: { [key: string]: [] }) => new Tag(one))
+        data: raw
+          .map((one: { [key: string]: [] }) => new Tag(one))
+          .sort((a, b) => b.count - a.count)
       })
     }
   }

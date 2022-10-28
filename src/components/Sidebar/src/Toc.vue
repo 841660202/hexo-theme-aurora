@@ -54,6 +54,7 @@ export default defineComponent({
   list-style: none;
   counter-reset: li;
   padding-left: 1.5rem;
+  font-size: 12px;
 
   > li {
     @apply text-ob-bright text-sm font-extrabold pb-1;

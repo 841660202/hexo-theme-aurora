@@ -59,6 +59,7 @@ export default defineComponent({
     return {
       tags: computed(() => {
         if (tagStore.isLoaded && tagStore.tags.length === 0) return null
+        console.log('tagStore.tags', tagStore.tags)
         return tagStore.tags
       }),
       t

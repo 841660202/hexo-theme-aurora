@@ -171,21 +171,29 @@
             class="w-full h-full self-stretch mr-0 lg:mr-4"
             v-if="post.prev_post.title"
           >
-            <SubTitle
-              title="settings.paginator.prev"
-              icon="arrow-left-circle"
-            />
+            <router-link
+              :to="{ name: 'post', params: { slug: post.prev_post.slug } }"
+            >
+              <SubTitle
+                title="settings.paginator.prev"
+                icon="arrow-left-circle"
+              />
+            </router-link>
             <Article :data="post.prev_post" />
           </div>
           <div
             class="w-full h-full self-stretch mt-8 lg:mt-0"
             v-if="post.next_post.title"
           >
-            <SubTitle
-              title="settings.paginator.next"
-              :side="!isMobile ? 'right' : 'left'"
-              icon="arrow-right-circle"
-            />
+            <router-link
+              :to="{ name: 'post', params: { slug: post.next_post.slug } }"
+            >
+              <SubTitle
+                title="settings.paginator.next"
+                :side="!isMobile ? 'right' : 'left'"
+                icon="arrow-right-circle"
+              />
+            </router-link>
             <Article :data="post.next_post" />
           </div>
         </div>

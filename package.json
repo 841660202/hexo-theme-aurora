@@ -23,7 +23,10 @@
     "env:prod": "node ./build/scripts/config-script.js prod",
     "env:pub": "node ./build/scripts/config-script.js publish",
     "cps": "cp -rf ./source ../841660202.github.io/node_modules/hexo-theme-aurora/",
-    "cpl": "cp -rf ./layout ../841660202.github.io/node_modules/hexo-theme-aurora/"
+    "cpl": "cp -rf ./layout ../841660202.github.io/node_modules/hexo-theme-aurora/",
+    "cpss": "cp -rf ./source ../technology-blog/node_modules/hexo-theme-aurora/",
+    "cpll": "cp -rf ./layout ../technology-blog/node_modules/hexo-theme-aurora/",
+    "cpp": "npm run cpss & npm run cpll"
   },
   "dependencies": {
     "axios": "^0.21.1",

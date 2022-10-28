@@ -63,8 +63,6 @@ export default defineComponent({
 
     return {
       categories: computed(() => {
-        console.log('categoryStore.categories', categoryStore.categories)
-
         if (categoryStore.isLoaded && categoryStore.categories.length === 0)
           return null
         return categoryStore.categories

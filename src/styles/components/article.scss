@@ -166,7 +166,9 @@
       background: var(--main-gradient);
     }
   }
-
+  img {
+    cursor: pointer;
+  }
   h1 {
     @apply text-3xl lg:text-4xl;
   }

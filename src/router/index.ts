@@ -4,7 +4,14 @@ import Home from '../views/Home.vue'
 
 const routes = [
   {
+    // /search/screens -> /search?q=screens
     path: '/',
+    redirect: () => {
+      return { path: '/p/1' }
+    }
+  },
+  {
+    path: '/p/:page',
     name: 'home',
     component: Home
   },

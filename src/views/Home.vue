@@ -87,7 +87,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, ref } from 'vue'
+import { computed, defineComponent, onMounted, ref, watch } from 'vue'
 import { Feature, FeatureList } from '@/components/Feature'
 import { Article, HorizontalArticle } from '@/components/ArticleCard'
 import { Title } from '@/components/Title'
@@ -99,6 +99,7 @@ import { useI18n } from 'vue-i18n'
 import { useCategoryStore } from '@/stores/category'
 import Paginator from '@/components/Paginator.vue'
 import { useMetaStore } from '@/stores/meta'
+import { useRoute, useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'Home',
@@ -115,6 +116,9 @@ export default defineComponent({
     Profile
   },
   setup() {
+    const router = useRouter()
+    const route = useRoute()
+    console.log('route', route.params)
     useMetaStore().setTitle('home')
     const postStore = usePostStore()
     const appStore = useAppStore()
@@ -141,10 +145,10 @@ export default defineComponent({
       pageTotal: 0,
       page: 1
     })
-
     /** Function section */
 
     const fetchData = async () => {
+      pagination.value.page = +route.params.page
       await postStore.fetchFeaturePosts().then(() => {
         topFeature.value = postStore.featurePosts.top_feature
         featurePosts.value = postStore.featurePosts.features
@@ -162,6 +166,16 @@ export default defineComponent({
           : 0
     }
 
+    watch(
+      () => route.params.page,
+      async page => {
+        console.log('page', page)
+        // eslint-disable-next-line prettier/prettier
+        pagination.value.page = +page
+
+        fetchData()
+      }
+    )
     onMounted(fetchData)
 
     const expandHandler = () => {
@@ -197,15 +211,15 @@ export default defineComponent({
 
     const fetchPostData = async () => {
       posts.value = new PostList()
-      await postStore.fetchPostsList(pagination.value.page).then(() => {
+      await postStore.fetchPostsList(+(route.params.page || 0)).then(() => {
         posts.value = postStore.posts
         pagination.value.pageTotal = postStore.posts.total
         pagination.value.pageSize = postStore.posts.pageSize
       })
     }
-
     const pageChangeHanlder = async (page: number) => {
       pagination.value.page = page
+      router.push('/p/' + page)
       backToArticleTop()
       await fetchPostData()
     }

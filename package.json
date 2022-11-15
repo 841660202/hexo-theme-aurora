@@ -26,7 +26,8 @@
     "cpl": "cp -rf ./layout ../841660202.github.io/node_modules/hexo-theme-aurora/",
     "cpss": "cp -rf ./source ../technology-blog/node_modules/hexo-theme-aurora/",
     "cpll": "cp -rf ./layout ../technology-blog/node_modules/hexo-theme-aurora/",
-    "cpp": "npm run cpss & npm run cpll"
+    "cpp": "npm run cpss & npm run cpll",
+    "cph": "npm run cps & npm run cpl"
   },
   "dependencies": {
     "axios": "^0.21.1",

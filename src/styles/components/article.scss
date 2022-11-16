@@ -266,6 +266,8 @@
 
   ol > li {
     counter-increment: li;
+    padding-bottom: 16px;
+    font-size: 13px;
   }
 
   ol > li::before,

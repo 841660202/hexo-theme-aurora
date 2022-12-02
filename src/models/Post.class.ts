@@ -154,7 +154,12 @@ export class SpecificPostsList {
   constructor(raw?: { [key: string]: [] }) {
     if (raw && raw.postlist) {
       Object.assign(this, {
-        data: raw.postlist.map((one: { [key: string]: [] }) => new Post(one)),
+        data: raw.postlist
+          .sort(
+            (a: any, b: any) =>
+              new Date(a.date).getTime() - new Date(b.date).getTime()
+          )
+          .map((one: { [key: string]: [] }) => new Post(one)),
         pageCount: raw.postlist.length,
         pageSize: raw.postlist.length,
         total: raw.postlist.length

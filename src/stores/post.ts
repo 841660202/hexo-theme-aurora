@@ -77,6 +77,7 @@ export const usePostStore = defineStore({
     },
     async fetchPostsByTag(slug: string): Promise<SpecificPostsList> {
       const { data } = await fetchPostsListByTag(slug)
+      console.log('data', data)
       return new Promise(resolve => {
         setTimeout(() => {
           resolve(new SpecificPostsList(data))

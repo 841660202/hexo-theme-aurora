@@ -174,7 +174,7 @@
   }
 
   h2 {
-    @apply text-2xl lg:text-3xl pt-0;
+    @apply text-2xl lg:text-3xl pt-5;
   }
 
   h3 {
@@ -266,6 +266,8 @@
 
   ol > li {
     counter-increment: li;
+    padding-bottom: 16px;
+    font-size: 13px;
   }
 
   ol > li::before,

@@ -35,7 +35,6 @@
 
 <script lang="ts">
 import { defineComponent, onBeforeMount, onUnmounted, computed } from 'vue'
-import { Sidebar } from '@/components/Sidebar'
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import { useI18n } from 'vue-i18n'
 import { useCommonStore } from '@/stores/common'
@@ -43,7 +42,7 @@ import { useCategoryStore } from '@/stores/category'
 import { CategoryList, CategoryItem } from '@/components/Category'
 export default defineComponent({
   name: 'Category',
-  components: { Sidebar, Breadcrumbs, CategoryList, CategoryItem },
+  components: { Breadcrumbs, CategoryList, CategoryItem },
   setup() {
     // const { t } = useI18n()
     // return { t }
